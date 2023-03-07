@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230307 18:58:56.266" rpa="false" schemaversion="3">
+<suite id="s1" name="seuBarriga" source="F:\Robot_sem_complicacao\SeuBarriga\seuBarriga.robot">
+<test id="s1-t1" name="Acessando" line="42">
+<kw name="Entrando no site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${navegador}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230307 18:58:56.405" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<status status="PASS" starttime="20230307 18:58:56.405" endtime="20230307 18:58:58.276"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230307 18:58:58.276" endtime="20230307 18:58:58.395"/>
+</kw>
+<status status="PASS" starttime="20230307 18:58:56.404" endtime="20230307 18:58:58.395"/>
+</kw>
+<status status="PASS" starttime="20230307 18:58:56.404" endtime="20230307 18:58:58.395"/>
+</test>
+<test id="s1-t2" name="Realizando cadastro" line="45">
+<kw name="Novo cadastro">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${navegador}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230307 18:58:58.397" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<status status="PASS" starttime="20230307 18:58:58.397" endtime="20230307 18:59:00.361"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230307 18:59:00.361" endtime="20230307 18:59:00.487"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Novo usuário?</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230307 18:59:00.487" level="INFO">Clicking link 'Novo usuário?'.</msg>
+<status status="PASS" starttime="20230307 18:59:00.487" endtime="20230307 18:59:00.760"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=nome</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230307 18:59:00.760" endtime="20230307 18:59:00.777"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=nome</arg>
+<arg>${nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230307 18:59:00.778" level="INFO">Typing text 'Raiane Barriga' into text field 'id=nome'.</msg>
+<status status="PASS" starttime="20230307 18:59:00.778" endtime="20230307 18:59:00.820"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230307 18:59:00.820" level="INFO">Typing text 'email304@teste.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20230307 18:59:00.820" endtime="20230307 18:59:00.867"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=senha</arg>
+<arg>${senha}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230307 18:59:00.868" level="INFO">Typing password into text field 'id=senha'.</msg>
+<msg timestamp="20230307 18:59:00.890" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230307 18:59:00.924" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230307 18:59:00.867" endtime="20230307 18:59:00.924"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[2]/form/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230307 18:59:00.925" level="INFO">Clicking element 'xpath=/html/body/div[2]/form/input'.</msg>
+<status status="PASS" starttime="20230307 18:59:00.925" endtime="20230307 18:59:01.481"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>css=.alert-success</arg>
+<arg>${msgSucesso}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230307 18:59:01.482" level="INFO">Verifying element 'css=.alert-success' contains exact text 'Usuário inserido com sucesso'.</msg>
+<msg timestamp="20230307 18:59:01.625" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230307 18:59:01.625" level="FAIL">Element with locator 'css=.alert-success' not found.</msg>
+<status status="FAIL" starttime="20230307 18:59:01.481" endtime="20230307 18:59:01.627"/>
+</kw>
+<status status="FAIL" starttime="20230307 18:58:58.396" endtime="20230307 18:59:01.627"/>
+</kw>
+<status status="FAIL" starttime="20230307 18:58:58.396" endtime="20230307 18:59:01.627">Element with locator 'css=.alert-success' not found.</status>
+</test>
+<test id="s1-t3" name="Realizando Login" line="48">
+<kw name="Login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${navegador}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230307 18:59:01.629" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<status status="PASS" starttime="20230307 18:59:01.629" endtime="20230307 18:59:03.708"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230307 18:59:03.708" endtime="20230307 18:59:03.834"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230307 18:59:03.834" level="INFO">Typing text 'email304@teste.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20230307 18:59:03.834" endtime="20230307 18:59:03.888"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=senha</arg>
+<arg>${senha}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230307 18:59:03.889" level="INFO">Typing password into text field 'id=senha'.</msg>
+<msg timestamp="20230307 18:59:03.909" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230307 18:59:03.932" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230307 18:59:03.888" endtime="20230307 18:59:03.932"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[text()='Entrar']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230307 18:59:03.933" level="INFO">Clicking button 'xpath=//button[text()='Entrar']'.</msg>
+<status status="PASS" starttime="20230307 18:59:03.932" endtime="20230307 18:59:04.496"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>css=.alert-success</arg>
+<arg>${msgLogin}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230307 18:59:04.496" level="INFO">Verifying element 'css=.alert-success' contains exact text 'Bem vindo, Jonathan teste!'.</msg>
+<msg timestamp="20230307 18:59:04.659" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230307 18:59:04.659" level="FAIL">The text of element 'css=.alert-success' should have been 'Bem vindo, Jonathan teste!' but it was 'Bem vindo, Raiane Barriga!'.</msg>
+<status status="FAIL" starttime="20230307 18:59:04.496" endtime="20230307 18:59:04.659"/>
+</kw>
+<status status="FAIL" starttime="20230307 18:59:01.629" endtime="20230307 18:59:04.660"/>
+</kw>
+<status status="FAIL" starttime="20230307 18:59:01.628" endtime="20230307 18:59:04.660">The text of element 'css=.alert-success' should have been 'Bem vindo, Jonathan teste!' but it was 'Bem vindo, Raiane Barriga!'.</status>
+</test>
+<doc>Robot Framework Sem Complicação</doc>
+<status status="FAIL" starttime="20230307 18:58:56.267" endtime="20230307 18:59:04.661"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="2" skip="0" id="s1" name="seuBarriga">seuBarriga</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
