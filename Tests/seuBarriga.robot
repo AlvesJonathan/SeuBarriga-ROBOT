@@ -9,7 +9,7 @@ Library          String
 ${url}                  https://seubarriga.wcaquino.me/login
 ${navegador}            chrome
 ${nome}                 Raiane Barriga
-${email}                email305@teste.com
+${email}                email306@teste.com
 ${senha}                123456
 ${msgSucesso}           Usuário inserido com sucesso
 ${msgLogin}             Bem vindo, Raiane Barriga!
